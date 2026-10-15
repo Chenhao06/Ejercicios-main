@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descripción de los módulos de primer curso del ciclo de Desarrollo de Aplicaciones Web."
+    />
+    <title>Módulos del ciclo | 1.º DAW</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        font-family: system-ui, sans-serif;
+        line-height: 1.6;
+        color: #172b3a;
+        background: #f2f6f8;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header,
+      footer {
+        padding: 1.5rem max(1rem, calc((100% - 70rem) / 2));
+        color: #fff;
+        background: #12364a;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+      }
+
+      header p,
+      footer p {
+        margin: 0.4rem 0 0;
+      }
+
+      main {
+        width: min(100% - 2rem, 70rem);
+        margin: 2rem auto;
+      }
+
+      section {
+        margin-bottom: 1.5rem;
+        padding: clamp(1rem, 3vw, 2rem);
+        border: 1px solid #d3e0e6;
+        border-radius: 0.75rem;
+        background: #fff;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      h3 {
+        margin-bottom: 0.25rem;
+        color: #174e68;
+      }
+
+      article + article {
+        margin-top: 1.25rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid #d3e0e6;
+      }
+
+      dl {
+        display: grid;
+        grid-template-columns: minmax(4rem, auto) 1fr;
+        gap: 0.5rem 1rem;
+        margin-bottom: 0;
+      }
+
+      dt {
+        font-weight: 700;
+      }
+
+      a {
+        color: #075c83;
+        font-weight: 650;
+      }
+
+      a:focus-visible {
+        outline: 3px solid #d07b00;
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Módulos de ASIX</h1>
+      <p>Qué aprenderás durante el primer curso de Administración de Sistemas Informáticos en Red.</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="module-list">
+        <h2 id="module-list">Aprendizajes del curso</h2>
+        <p>
+          El ciclo combina fundamentos técnicos y competencias profesionales.
+          Aprenderás a crear soluciones <strong>accesibles</strong>, trabajar con
+          datos de forma <em>organizada</em> y resolver problemas con
+          <strong>lógica</strong>.
+        </p>
+
+        <article>
+          <h3>Sistemes </h3>
+          <p>
+            Desarrolla el pensamiento algorítmico y la capacidad de escribir
+            programas. Practica estructuras de control, datos y resolución de
+            problemas mediante código.
+          </p>
+        </article>
+        <article>
+          <h3>Lenguajes de marcas y sistemas de gestión de información (LM)</h3>
+          <p>
+            Aprende a estructurar documentos con HTML y a presentarlos con CSS.
+            También conocerás formatos de intercambio de datos y principios de
+            accesibilidad web.
+          </p>
+        </article>
+        <article>
+          <h3>Bases de datos (BBDD)</h3>
+          <p>
+            Diseña modelos de datos y almacena información de manera coherente.
+            Practica consultas y operaciones para gestionar datos con fiabilidad.
+          </p>
+        </article>
+        <article>
+          <h3>Sistemas informáticos (SI)</h3>
+          <p>
+            Explora componentes, sistemas operativos y redes. Adquiere una base
+            para configurar y mantener el entorno de desarrollo.
+          </p>
+        </article>
+        <article>
+          <h3>Entornos de desarrollo (ED)</h3>
+          <p>
+            Utiliza herramientas para crear y probar software. Trabaja con
+            depuración, control de versiones y documentación de proyectos.
+          </p>
+        </article>
+        <article>
+          <h3>Inglés profesional (IP)</h3>
+          <p>
+            Amplía el vocabulario técnico y la comunicación en inglés. Practica
+            la comprensión de documentación y situaciones del ámbito laboral.
+          </p>
+        </article>
+        <article>
+          <h3>Itinerario personal para la empleabilidad I (IPE I)</h3>
+          <p>
+            Desarrolla habilidades para la incorporación al mundo profesional.
+            Conoce derechos laborales, prevención de riesgos y herramientas para
+            planificar tu itinerario.
+          </p>
+        </article>
+        <article>
+          <h3>Digitalización aplicada a los sectores productivos (DIG)</h3>
+          <p>
+            Conoce tecnologías y procesos de transformación digital. Relaciona
+            estas herramientas con los cambios que experimentan las empresas.
+          </p>
+        </article>
+      </section>
+
+      <section aria-labelledby="abbreviations">
+        <h2 id="abbreviations">Siglas y nombres completos</h2>
+        <dl>
+          <dt>PROG</dt>
+          <dd>Programación</dd>
+          <dt>LM</dt>
+          <dd>Lenguajes de marcas y sistemas de gestión de información</dd>
+          <dt>BD</dt>
+          <dd>Bases de datos</dd>
+          <dt>SI</dt>
+          <dd>Sistemas informáticos</dd>
+          <dt>ED</dt>
+          <dd>Entornos de desarrollo</dd>
+          <dt>IP</dt>
+          <dd>Inglés profesional</dd>
+          <dt>IPE I</dt>
+          <dd>Itinerario personal para la empleabilidad I</dd>
+          <dt>DIG</dt>
+          <dd>Digitalización aplicada a los sectores productivos</dd>
+        </dl>
+      </section>
+
+      <nav aria-label="Navegación del ejercicio">
+        <a href="../index.html">Volver al horario principal</a>
+      </nav>
+    </main>
+
+    <footer>
+      <p>Los módulos pueden variar según el plan de estudios y el centro educativo.</p>
+    </footer>
+  </body>
+</html>

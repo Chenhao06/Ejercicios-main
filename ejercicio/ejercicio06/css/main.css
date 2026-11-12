@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. RESET & VARIABLES
-   ========================================================================== */
 :root {
   --main-bg: lightsalmon;
   --sub-bg: rgb(253, 213, 197);
@@ -21,9 +18,6 @@ h1 {
   font-weight: bold;
 }
 
-/* ==========================================================================
-   2. LAYOUT - MAIN GRID (Fase 2)
-   ========================================================================== */
 .grid-container {
   display: grid;
   /* Requisit: columnes 1fr 2fr 1fr */
@@ -37,9 +31,8 @@ h1 {
   padding: 3rem;
 }
 
-/* Posicionament de les àrees/ítem segons la referència */
 .item-1 {
-  grid-column: 1 / -1; /* Ocupa totes les columnes de la fila superior */
+  grid-column: 1 / -1;
 }
 
 .item-2 {
@@ -55,20 +48,13 @@ h1 {
 }
 
 .item-5 {
-  grid-column: 1 / -1; /* Ocupa totes les columnes de la fila inferior */
+  grid-column: 1 / -1; 
 }
 
-/* ==========================================================================
-   3. COMPONENTS - SUBGRID (Fase 1)
-   ========================================================================== */
 .grid-container-2 {
   display: grid;
-  /* 
-     Requisit: minmax() per adaptar-se en reduir l'amplada 
-     (reorganitza automàticament els sub-items com a les imatges Captura1, Captura2 i Captura-Extra)
-  */
+
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-  /* Requisit: espai entre sub-items de 1rem */
   gap: var(--gap-subgrid);
   margin-top: 1.5rem;
 }

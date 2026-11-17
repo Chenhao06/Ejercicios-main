@@ -1,0 +1,202 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1 y 2. Formulario centrado en pantalla y fondo de página distinto al del formulario */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #12151e; /* Fondo oscuro gaming */
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* 4 y 8. Contenedor del formulario con esquinas redondeadas y anchura adaptable */
+.contenedor {
+  background-color: #1e2433; /* Fondo distinto al del body */
+  width: 100%;
+  max-width: 600px; /* Se adapta a móvil y no crece demasiado en PC */
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid #2e374d;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.banner {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #38bdf8;
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+/* Estilo de Fieldset y Legend */
+fieldset {
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  padding: 0 10px;
+  color: #38bdf8;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+/* 3. Espaciado correcto entre campos */
+.campo {
+  margin-bottom: 16px;
+}
+
+.fila-doble {
+  display: flex;
+  gap: 15px;
+}
+
+.fila-doble .campo {
+  flex: 1;
+}
+
+label,
+.titulo-grupo {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+/* 4. Bordes y esquinas redondeadas en inputs */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #f8fafc;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* 7. Efecto para destacar el campo que se ha seleccionado */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+/* Radios y Checkboxes */
+.opciones-linea {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.opcion-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #38bdf8;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Enlace de normas */
+.campo-normas {
+  margin-bottom: 22px;
+  font-size: 0.9rem;
+}
+
+.campo-normas a {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+/* 5. Estilo personalizado para los botones */
+.botones {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.btn-enviar {
+  background-color: #0284c7;
+  color: white;
+}
+
+.btn-limpiar {
+  background-color: #334155;
+  color: #e2e8f0;
+}
+
+/* 6. Efecto al pasar por encima de un botón */
+.btn-enviar:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+}
+
+.btn-limpiar:hover {
+  background-color: #475569;
+  transform: translateY(-2px);
+}
+
+/* Adaptación extra para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .fila-doble,
+  .botones {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .botones {
+    gap: 10px;
+  }
+}

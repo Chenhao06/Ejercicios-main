@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscripción - Torneo de Videojuegos</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="contenedor">
+      <!-- Banner superior usando la imagen que ya tienes en img/ -->
+      <img
+        src="./img/the-top-100-video-games-of-all-time_53uq.jpg"
+        alt="Banner Torneo de Videojuegos"
+        class="banner"
+      />
+
+      <h1>Inscripción al Torneo Gaming</h1>
+      <p class="subtitulo">Rellena tus datos para reservar tu plaza.</p>
+
+      <form action="#" method="get">
+        <!-- PRIMER BLOQUE: Datos personales -->
+        <fieldset>
+          <legend>Datos del Participante</legend>
+
+          <div class="campo">
+            <label for="nombre">Nombre completo *</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej. Carlos García"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="correo">Correo electrónico *</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="jugador@correo.com"
+              required
+            />
+          </div>
+
+          <div class="fila-doble">
+            <div class="campo">
+              <label for="edad">Edad (mínimo 16 años)</label>
+              <input
+                type="number"
+                id="edad"
+                name="edad"
+                min="16"
+                max="99"
+                placeholder="16"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="nacimiento">Fecha de nacimiento</label>
+              <input type="date" id="nacimiento" name="nacimiento" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- SEGUNDO BLOQUE: Perfil de jugador -->
+        <fieldset>
+          <legend>Perfil de Jugador</legend>
+
+          <div class="campo">
+            <label for="nickname">Nombre del jugador (Nickname) *</label>
+            <input
+              type="text"
+              id="nickname"
+              name="nickname"
+              minlength="3"
+              maxlength="15"
+              placeholder="Entre 3 y 15 caracteres"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="password">Contraseña de la cuenta *</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="videojuego">Videojuego del torneo</label>
+            <select id="videojuego" name="videojuego">
+              <option value="valorant">Valorant</option>
+              <option value="lol">League of Legends</option>
+              <option value="fc26">EA Sports FC 26</option>
+              <option value="streetfighter">Street Fighter 6</option>
+              <option value="rocketleague">Rocket League</option>
+            </select>
+          </div>
+
+          <!-- Selección única (Radio buttons) -->
+          <div class="campo">
+            <span class="titulo-grupo">Plataforma (selección única):</span>
+            <div class="opciones-linea">
+              <label class="opcion-check">
+                <input type="radio" name="plataforma" value="pc" checked /> PC
+              </label>
+              <label class="opcion-check">
+                <input type="radio" name="plataforma" value="playstation" /> PlayStation
+              </label>
+              <label class="opcion-check">
+                <input type="radio" name="plataforma" value="xbox" /> Xbox
+              </label>
+            </div>
+          </div>
+
+          <!-- Selección múltiple (Checkboxes) -->
+          <div class="campo">
+            <span class="titulo-grupo">Disponibilidad horaria (selección múltiple):</span>
+            <div class="opciones-linea">
+              <label class="opcion-check">
+                <input type="checkbox" name="horario" value="manana" /> Mañana
+              </label>
+              <label class="opcion-check">
+                <input type="checkbox" name="horario" value="tarde" /> Tarde
+              </label>
+              <label class="opcion-check">
+                <input type="checkbox" name="horario" value="noche" /> Noche
+              </label>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="comentarios">Comentarios adicionales</label>
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              rows="3"
+              placeholder="Equipo al que perteneces, dudas, alergias..."
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Aceptación de normas con enlace a normas.html -->
+        <div class="campo-normas">
+          <label class="opcion-check">
+            <input type="checkbox" id="normas" name="normas" required />
+            <span>
+              He leído y acepto las
+              <a href="./normas.html" target="_blank">normas del torneo (ToS)</a> *
+            </span>
+          </label>
+        </div>
+
+        <!-- Botones nativos -->
+        <div class="botones">
+          <button type="submit" class="btn-enviar">Inscribirse</button>
+          <button type="reset" class="btn-limpiar">Limpiar formulario</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

@@ -6,34 +6,54 @@
   --fifth-color: orange;
   --wrapper-width: 90vw;
 }
+
 * {
   box-sizing: border-box;
 }
+
+/* Requisit 2: Moviment suau en fer clic a l'enllaç cap amunt */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   height: 2000px;
 }
+
+/* Requisit 1: Header fix a la part superior */
 header {
   background-color: var(--primary-color);
   padding: 1rem 0;
-  margin-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
+
 h1 {
   font-size: 3rem;
   font-weight: bold;
   color: var(--second-color);
   text-align: center;
 }
+
 h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: center;
 }
+
+/* Requisit 1: Evitem que el contingut quedi tapat pel header fix */
 .wrapper {
   width: var(--wrapper-width);
   margin: 0 auto;
+  padding-top: 8rem;
 }
+
+/* Requisit 2: Botó fix a la part inferior dreta */
 .up-btn {
   display: inline-block;
   text-decoration: none;
@@ -42,10 +62,22 @@ h2 {
   width: 5rem;
   background-color: var(--fifth-color);
   border-radius: 100%;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
 }
+
+/* ADVANCED LEVEL: Gradient radial en passar el ratolí per sobre */
 .up-btn:hover {
-  background-color: var(--primary-color);
+  background: radial-gradient(
+    circle,
+    var(--second-color) 0%,
+    var(--primary-color) 60%,
+    var(--third-color) 100%
+  );
 }
+
 .text-center {
   height: 100%;
   width: 100%;
